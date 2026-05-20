@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Students Detail - FPT University</title>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Top Navigation Navbar */
+        .main-navbar {
+            margin-bottom: 0;
+        }
+
+        /* FPT Header styling */
+        .fpt-top-header {
+            background-color: #eddcb9;
+            padding: 10px 0;
+            border-bottom: 2px solid #dfc698;
+        }
+
+        .header-logo {
+            max-height: 55px;
+        }
+
+        .header-menu {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .header-menu li {
+            margin-right: 15px;
+        }
+
+        .header-menu li a {
+            color: #d35400;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .header-menu li a:hover {
+            color: #a04000;
+            text-decoration: underline;
+        }
+
+        .header-menu li a i {
+            margin-right: 4px;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .search-container label {
+            margin-right: 8px;
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .search-container input {
+            border: 1px solid #cccccc;
+            padding: 3px 10px;
+            border-radius: 4px;
+            max-width: 180px;
+        }
+
+        /* Jumbotron styling */
+        .fpt-jumbotron {
+            background-color: #f27024;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .banner-img-wrapper {
+            background-color: #ffffff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        /* Breadcrumb styling */
+        .breadcrumb-container {
+            padding: 15px 0;
+        }
+
+        .breadcrumb {
+            background-color: #e9ecef;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin-bottom: 0;
+        }
+
+        .breadcrumb-item a {
+            color: #f27024;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: #6c757d;
+        }
+
+        /* Content Title */
+        .content-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #212529;
+            font-size: 2.2rem;
+        }
+
+        /* Student Card styling */
+        .student-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .student-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-img-container {
+            width: 100%;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .student-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+        }
+
+        .student-info {
+            padding: 20px;
+        }
+
+        .student-id {
+            text-align: center;
+            font-weight: 500;
+            color: #6c757d;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .student-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .student-name {
+            font-weight: bold;
+            color: #212529;
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .student-location {
+            font-weight: bold;
+            color: #212529;
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .attendance-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            border-top: 1px solid #f1f1f1;
+            border-bottom: 1px solid #f1f1f1;
+            padding: 10px 0;
+        }
+
+        .attendance-options label {
+            font-size: 0.95rem;
+            color: #495057;
+            cursor: pointer;
+        }
+
+        .attendance-options input {
+            margin-right: 6px;
+            accent-color: #f27024;
+        }
+
+        .btn-submit {
+            background-color: #f27024;
+            color: #ffffff;
+            font-weight: 500;
+            border: none;
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #d35400;
+            color: #ffffff;
+        }
+
+        /* Footer styling */
+        .fpt-footer {
+            background-color: #f27024;
+            color: #ffffff;
+            padding: 40px 0 20px 0;
+            margin-top: 40px;
+        }
+
+        .fpt-footer h4 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .fpt-footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .fpt-footer ul li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .fpt-footer ul li i {
+            margin-right: 10px;
+            width: 16px;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-left: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+
+        .copyright-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark main-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#">Con Fusion</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./grid.html">Grid Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./first_page.html">First Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./fpt.html">FPT Page</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./students.html">Students</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FPT Top Header -->
+    <div class="fpt-top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4 mb-2 mb-md-0 text-center text-md-left">
+                    <img src="assets/images/fpt-university.png" alt="FPT University" class="header-logo">
+                </div>
+                <div class="col-12 col-md-5 mb-2 mb-md-0 d-flex justify-content-center">
+                    <ul class="header-menu">
+                        <li><a href="#"><i class="fa fa-home"></i>Trang chủ</a></li>
+                        <li><a href="#"><i class="fa fa-graduation-cap"></i>Ngành học</a></li>
+                        <li><a href="#"><i class="fa fa-address-card"></i>Tuyển sinh</a></li>
+                        <li><a href="#"><i class="fa fa-list"></i>Sinh viên</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 search-container text-center text-md-right">
+                    <label for="search-input">Search:</label>
+                    <input type="text" id="search-input">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FPT Jumbotron Banner -->
+    <div class="fpt-jumbotron">
+        <div class="container">
+            <div class="banner-img-wrapper">
+                <img src="assets/images/fpt-banner.jpg" alt="FPT Students Banner" class="banner-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="container breadcrumb-container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Students</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Students Detail List -->
+    <div class="container">
+        <h2 class="content-title">Students Detail</h2>
+
+        <div class="row">
+            <!-- Student 1 -->
+            <div class="col-12 col-md-6">
+                <div class="student-card">
+                    <div class="student-img-container">
+                        <img src="assets/images/DE160182.jpg" alt="Nguyễn Thảo Vy" class="student-img">
+                    </div>
+                    <div class="student-info">
+                        <div class="student-id">DE160182</div>
+                        <div class="student-meta">
+                            <span class="student-name">Nguyễn Thảo Vy</span>
+                            <span class="student-location">DaNang</span>
+                        </div>
+                        <form action="#">
+                            <div class="attendance-options">
+                                <label><input type="radio" name="status_DE160182" value="Absent"> Absent</label>
+                                <label><input type="radio" name="status_DE160182" value="Present"> Present</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student 2 -->
+            <div class="col-12 col-md-6">
+                <div class="student-card">
+                    <div class="student-img-container">
+                        <img src="assets/images/DE160488.png" alt="Trần Anh Tuấn" class="student-img">
+                    </div>
+                    <div class="student-info">
+                        <div class="student-id">DE160488</div>
+                        <div class="student-meta">
+                            <span class="student-name">Nguyễn Sỹ Đức</span>
+                            <span class="student-location">HaTinh</span>
+                        </div>
+                        <form action="#">
+                            <div class="attendance-options">
+                                <label><input type="radio" name="status_DE160488" value="Absent"> Absent</label>
+                                <label><input type="radio" name="status_DE160488" value="Present"> Present</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student 3 -->
+            <div class="col-12 col-md-6">
+                <div class="student-card">
+                    <div class="student-img-container">
+                        <img src="assets/images/DE160547.jpg" alt="Lê Mai Anh" class="student-img">
+                    </div>
+                    <div class="student-info">
+                        <div class="student-id">DE160547</div>
+                        <div class="student-meta">
+                            <span class="student-name">Lê Mai Anh</span>
+                            <span class="student-location">Hue</span>
+                        </div>
+                        <form action="#">
+                            <div class="attendance-options">
+                                <label><input type="radio" name="status_DE160547" value="Absent"> Absent</label>
+                                <label><input type="radio" name="status_DE160547" value="Present"> Present</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student 4 -->
+            <div class="col-12 col-md-6">
+                <div class="student-card">
+                    <div class="student-img-container">
+                        <img src="assets/images/DE170049.jpg" alt="Phạm Minh Thư" class="student-img">
+                    </div>
+                    <div class="student-info">
+                        <div class="student-id">DE170049</div>
+                        <div class="student-meta">
+                            <span class="student-name">Phạm Minh Thư</span>
+                            <span class="student-location">DaNang</span>
+                        </div>
+                        <form action="#">
+                            <div class="attendance-options">
+                                <label><input type="radio" name="status_DE170049" value="Absent"> Absent</label>
+                                <label><input type="radio" name="status_DE170049" value="Present"> Present</label>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orange Footer Section -->
+    <footer class="fpt-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Address Section -->
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <h4>Our Address</h4>
+                    <ul>
+                        <li>Khu đô thị FPT Đà Nẵng</li>
+                        <li><i class="fa fa-phone"></i>: +84023111111</li>
+                        <li><i class="fa fa-fax"></i>: +852 8765 4321</li>
+                        <li><i class="fa fa-envelope"></i>: <a href="mailto:fptudn@fpt.edu.vn"
+                                class="text-white">fptudn@fpt.edu.vn</a></li>
+                    </ul>
+                </div>
+                <!-- Social Icons Section -->
+                <div class="col-12 col-md-6">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright-section">
+                        <p>© Copyright 2026 - Nguyen Sy Duc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

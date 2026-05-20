@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Dashboard & User Guide - Con Fusion</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Hero/Jumbotron section */
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #18bc9c);
+            color: #ffffff;
+            padding: 80px 0 60px 0;
+            margin-top: 56px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Overview cards section */
+        .overview-title {
+            text-align: center;
+            font-weight: 700;
+            margin: 50px 0 30px 0;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .overview-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #18bc9c;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .guide-card {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .guide-card-body {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background-color: #f1fcf9;
+        }
+
+        .guide-card-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .guide-card-text {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .tech-tags {
+            margin-bottom: 20px;
+        }
+
+        .tech-badge {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        /* Footer styling */
+        .main-footer {
+            background-color: #212529;
+            color: #a0a0a0;
+            padding: 50px 0 20px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        .footer-heading {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #18bc9c;
+        }
+
+        .social-icons-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons-footer a {
+            color: #a0a0a0;
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+
+        .social-icons-footer a:hover {
+            color: #18bc9c;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #343a40;
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#">Con Fusion</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./grid.html">Grid Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./first_page.html">First Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./fpt.html">FPT Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./students.html">Students</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>Tổng Quan & Hướng Dẫn Dự Án</h1>
+            <p>Chào mừng bạn đến với trang tổng hợp các bài tập thiết kế và xây dựng giao diện ứng dụng Web sử dụng
+                framework Bootstrap 5.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="container mb-5">
+        <h2 class="overview-title">Khám Phá Các Giao Diện</h2>
+
+        <div class="row g-4">
+            <!-- Grid Test Card -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="guide-card">
+                    <div class="guide-card-body">
+                        <div class="card-icon-wrapper" style="background-color: #eef7ff;">
+                            <i class="fa-solid fa-table-cells fa-xl" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="guide-card-title">Grid Test</h3>
+                        <p class="guide-card-text">Giao diện thử nghiệm hệ thống lưới chia cột linh hoạt (Grid System)
+                            của Bootstrap 5, sử dụng các thuộc tính không khoảng lề (gutterless rows).</p>
+                        <div class="tech-tags">
+                            <span class="tech-badge bg-primary text-light">Bootstrap Grid</span>
+                            <span class="tech-badge bg-secondary text-light">Gutterless</span>
+                            <span class="tech-badge bg-dark text-light">CSS Custom</span>
+                        </div>
+                        <a href="./grid.html" class="btn btn-outline-primary btn-sm w-100 mt-auto">Xem trang Grid Test
+                            <i class="fa fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Page Card -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="guide-card">
+                    <div class="guide-card-body">
+                        <div class="card-icon-wrapper" style="background-color: #effbf4;">
+                            <i class="fa-solid fa-laptop-code fa-xl" style="color: #198754;"></i>
+                        </div>
+                        <h3 class="guide-card-title">First Page</h3>
+                        <p class="guide-card-text">Trang giới thiệu 3 trụ cột thiết kế Web: HTML5, CSS3 và Bootstrap với
+                            biểu tượng phóng to sống động khi hover chuột.</p>
+                        <div class="tech-tags">
+                            <span class="tech-badge bg-success text-light">HTML5 & CSS3</span>
+                            <span class="tech-badge bg-secondary text-light">Micro-interaction</span>
+                            <span class="tech-badge bg-dark text-light">Responsive</span>
+                        </div>
+                        <a href="./first_page.html" class="btn btn-outline-success btn-sm w-100 mt-auto">Xem First Page
+                            <i class="fa fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FPT Page Card -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="guide-card">
+                    <div class="guide-card-body">
+                        <div class="card-icon-wrapper" style="background-color: #fff9eb;">
+                            <i class="fa-solid fa-university fa-xl" style="color: #ffc107;"></i>
+                        </div>
+                        <h3 class="guide-card-title">FPT Page</h3>
+                        <p class="guide-card-text">Giao diện tối giản mang sắc cam thương hiệu của FPT University, phục
+                            vụ làm cấu trúc cơ sở cho các trang thông tin giáo dục.</p>
+                        <div class="tech-tags">
+                            <span class="tech-badge bg-warning text-dark">Brand Design</span>
+                            <span class="tech-badge bg-secondary text-light">Structure Layout</span>
+                            <span class="tech-badge bg-dark text-light">FPT Theme</span>
+                        </div>
+                        <a href="./fpt.html" class="btn btn-outline-warning btn-sm w-100 text-dark mt-auto">Xem FPT Page
+                            <i class="fa fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Students Card -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="guide-card">
+                    <div class="guide-card-body">
+                        <div class="card-icon-wrapper" style="background-color: #eefafc;">
+                            <i class="fa-solid fa-users fa-xl" style="color: #0dcaf0;"></i>
+                        </div>
+                        <h3 class="guide-card-title">Students Portal</h3>
+                        <p class="guide-card-text">Cổng thông tin chi tiết sinh viên kết hợp tính năng điểm danh chuyên
+                            nghiệp (Absent/Present) trên lưới thẻ (Card Grid) đẹp mắt.</p>
+                        <div class="tech-tags">
+                            <span class="tech-badge bg-info text-dark">Card Grid</span>
+                            <span class="tech-badge bg-secondary text-light">Form Control</span>
+                            <span class="tech-badge bg-dark text-light">Bootstrap Icons</span>
+                        </div>
+                        <a href="./students.html" class="btn btn-outline-info btn-sm w-100 text-dark mt-auto">Xem
+                            Students Portal <i class="fa fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Info Section -->
+                <div class="col-12 col-md-5 mb-4 mb-md-0">
+                    <h5 class="footer-heading">Con Fusion & Bootstrap Lab</h5>
+                    <p class="pe-md-4">Ứng dụng web tổng hợp được thiết kế để học tập và áp dụng các tính năng hàng đầu
+                        của Bootstrap 5, bao gồm lưới Grid, thẻ Component, biểu mẫu Form và khả năng đáp ứng đa màn
+                        hình.</p>
+                </div>
+                <!-- Links Section -->
+                <div class="col-12 col-sm-6 col-md-3 mb-4 mb-sm-0">
+                    <h5 class="footer-heading">Danh mục bài học</h5>
+                    <ul class="footer-links">
+                        <li><a href="./index.html"><i class="fa fa-home me-2"></i>Trang chủ</a></li>
+                        <li><a href="./grid.html"><i class="fa fa-table-cells me-2"></i>Hệ thống lưới (Grid)</a></li>
+                        <li><a href="./first_page.html"><i class="fa fa-code me-2"></i>Biểu tượng công nghệ</a></li>
+                        <li><a href="./fpt.html"><i class="fa fa-university me-2"></i>Cơ sở Đại học FPT</a></li>
+                        <li><a href="./students.html"><i class="fa fa-users me-2"></i>Danh sách sinh viên</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Section -->
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="footer-heading">Liên hệ & Mạng xã hội</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Khu đô thị FPT Đà Nẵng, Việt Nam</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-2"></i> fptudn@fpt.edu.vn</p>
+                    <div class="social-icons-footer">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Footer -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <p class="m-0">© Copyright 2026 Con Fusion Bootstrap Project - Nguyen Sy Duc. All Rights
+                            Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

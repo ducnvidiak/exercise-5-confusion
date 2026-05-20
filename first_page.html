@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <title>My First Bootstrap Page</title>
+
+    <style>
+        .header-box {
+            background-color: #e9ecef;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header-box h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 0;
+            color: #212529;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .image-container img {
+            max-height: 200px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#">Con Fusion</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./grid.html">Grid Test</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./first_page.html">First Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./fpt.html">FPT Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./students.html">Students</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-box mt-5">
+        <div class="container">
+            <h1>My First Bootstrap Page</h1>
+        </div>
+    </div>
+
+    <div class="container my-auto">
+        <div class="row align-items-center justify-content-center image-container g-4 py-4">
+            <div class="col-12 col-md-4 text-center">
+                <img src="assets/images/html5-icon.png" class="img-fluid px-3" alt="HTML5">
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="assets/images/css3.png" class="img-fluid px-3" alt="CSS3">
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <img src="assets/images/bootstrap.png" class="img-fluid px-3" alt="Bootstrap">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-dark text-light p-3 mt-auto text-center">
+        <div class="container">
+            <p class="m-0 text-secondary">© Copyright 2026 Con Fusion - Nguyen Sy Duc</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

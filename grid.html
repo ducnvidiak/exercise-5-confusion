@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <title>Grid Test</title>
+
+    <style>
+        .header-box {
+            background-color: #e9ecef;
+            padding: 50px 30px;
+            margin-bottom: 50px;
+        }
+
+        .header-box h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 0;
+            color: #212529;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .grid-container {
+            margin-bottom: 50px;
+        }
+
+        .grid-col {
+            background-color: #d3d3d3;
+            border: 1px solid #a0a0a0;
+            height: 90px;
+            padding: 10px;
+            font-size: 1rem;
+            color: #333;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .footer-box {
+            background-color: #cdc5c2;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-box p {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin: 0;
+            color: #212529;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#">Con Fusion</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./grid.html">Grid Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./first_page.html">First Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./fpt.html">FPT Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./students.html">Students</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-box mt-5">
+        <div class="container-fluid px-4">
+            <h1>Let's test the grid!</h1>
+        </div>
+    </div>
+
+    <div class="container grid-container">
+        <!-- Row 1: Two equal columns -->
+        <div class="row g-0">
+            <div class="col-6 grid-col">First col</div>
+            <div class="col-6 grid-col">Second col</div>
+        </div>
+
+        <!-- Row 2: Three equal columns -->
+        <div class="row g-0">
+            <div class="col-4 grid-col">col</div>
+            <div class="col-4 grid-col">col</div>
+            <div class="col-4 grid-col">col</div>
+        </div>
+
+        <!-- Row 3: Four equal columns -->
+        <div class="row g-0">
+            <div class="col-3 grid-col">col</div>
+            <div class="col-3 grid-col">col</div>
+            <div class="col-3 grid-col">col</div>
+            <div class="col-3 grid-col">col</div>
+        </div>
+    </div>
+
+    <div class="footer-box">
+        <p>Created by Nguyen Sy Duc!</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
