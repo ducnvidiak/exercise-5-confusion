@@ -16,6 +16,7 @@ Dự án bao gồm các tệp tin chính sau:
 *   **`first_page.html` (Core Tech Intro):** Trang giới thiệu 3 trụ cột thiết kế giao diện (HTML5, CSS3, Bootstrap) có hiệu ứng phóng to (hover zoom) động khi di chuột qua.
 *   **`fpt.html` (FPT Basic Layout):** Giao diện cơ sở tối giản mang thương hiệu trường Đại học FPT làm nền tảng bố cục.
 *   **`students.html` (Quản lý sinh viên):** Trang cổng thông tin sinh viên FPT (Nguyễn Thảo Vy, Trần Anh Tuấn, Lê Mai Anh, Phạm Minh Thư) với bố cục 2x2, ảnh chân dung tỷ lệ dọc 3:4, hệ thống nút điểm danh (Absent / Present) và footer chi tiết đồng bộ màu cam FPT.
+*   **`prompts.md` (Tài liệu gợi ý AI):** Bộ 6 câu lệnh (prompts) tiếng Việt được thiết kế tối ưu để hướng dẫn AI sinh mã nguồn tái tạo dự án này từ đầu.
 *   **`assets/images/`:** Thư mục lưu trữ tài nguyên hình ảnh (biểu tượng công nghệ, logo FPT, ảnh sinh viên, banner).
 
 ---
@@ -62,3 +63,9 @@ Dự án bao gồm các tệp tin chính sau:
 *   `DE160488.png`: Ảnh thẻ sinh viên Nguyễn Sỹ Đức.
 *   `DE160547.jpg`: Ảnh thẻ sinh viên Lê Mai Anh.
 *   `DE170049.jpg`: Ảnh thẻ sinh viên Phạm Minh Thư.
+
+---
+
+## 🤖 Bộ gợi ý tạo mã (AI Prompts)
+
+Dự án tích hợp tệp **[prompts.md](./prompts.md)** chứa 6 bước gợi ý (prompts) chi tiết và tối ưu hóa cao. Bạn có thể sao chép các câu lệnh này cung cấp cho các trợ lý lập trình AI (ChatGPT, Claude, Gemini, Antigravity,...) để tái sinh tự động toàn bộ mã nguồn hoặc các mô-đun riêng lẻ của dự án này một cách trực quan và đồng bộ nhất.
